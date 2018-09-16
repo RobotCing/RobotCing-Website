@@ -287,6 +287,12 @@ a:focus, a:hover {
   color: #3c6360;
 }
 
+li {
+  color: rgba(255, 255, 255, 0.5) !important;
+  text-align: left !important;
+
+}
+
 .bg-black {
   background-color: #161616 !important;
 }
