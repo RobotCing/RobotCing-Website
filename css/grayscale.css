@@ -21,7 +21,7 @@
 }
 
 #mainNav .navbar-brand {
-  color: #161616;
+  color: #3c6360;
   font-weight: 700;
   padding: .9rem 0;
 }
@@ -100,14 +100,16 @@
   background-size: cover;
 }
 
+
 .masthead h1 {
   font-family: 'Varela Round';
   font-size: 2.5rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  line-height: 4rem;
+  letter-spacing: 0.6rem;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+
 }
 
 .masthead h2 {
@@ -118,7 +120,7 @@
 @media (min-width: 768px) {
   .masthead h1 {
     font-size: 4rem;
-    line-height: 4rem;
+    line-height: 5rem;
   }
 }
 
@@ -128,9 +130,9 @@
     padding: 0;
   }
   .masthead h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
-    letter-spacing: 0.8rem;
+    font-size: 5.5rem;
+    line-height: 7rem;
+    letter-spacing: 0.6rem;
   }
   .masthead h2 {
     max-width: 30rem;
@@ -141,13 +143,13 @@
 .btn {
   -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 0.5rem 0.5rem;
+  padding: 1.1rem 1.1rem;
   font-family: 'Varela Round';
-  font-size: 80%;
+  font-size: 100%;
   text-transform: uppercase;
   letter-spacing: .15rem;
   border: 0;
-  border-radius: 200rem;
+
 }
 
 .btn-primary {
@@ -175,8 +177,10 @@
 .learnmore-section {
   padding-top: 10rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to top, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+  background: linear-gradient(to top, #161616 0%, rgba(22, 22, 22, 1) 25%, rgba(22, 22, 22, 0.8) 100%);
+  margin-bottom: -10rem;
 }
+
 
 .about-section p {
   margin-bottom: 5rem;
@@ -214,9 +218,10 @@
 }
 
 .signup-section {
-  padding: 10rem 0;
+  margin-top: 10rem;
+  padding: 20rem 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
+  background: linear-gradient(to top, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 50%, rgba(22, 22, 22, 1)100%), url("../img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -236,12 +241,12 @@
 }
 
 .contact-section {
-  padding: 5rem 0 0;
+  padding: 1rem 0 0;
 }
 
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid #64a19d;
+  border-bottom: 0.5rem solid #64a19d;
 }
 
 .contact-section .card h4 {
@@ -279,7 +284,10 @@
   color: #fff;
 }
 .img-started {
-  margin-top: 5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vw;
   height: 5rem;
   width: 5rem;
   opacity: 0.5;
@@ -317,5 +325,50 @@ li {
 }
 
 footer {
-  padding: 5rem 0;
+  font-family: 'Varela Round';
+  font-size: 3rem;
+  letter-spacing: 2rem;
+}
+.copyright {
+  margin-top: 15rem;
+  margin-bottom: -15rem;
+  font-size: 2rem;
+}
+
+
+#mySidenav a {
+    z-index: 999;
+    white-space:pre;
+    position: fixed;
+    left: -130px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 190px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    border-radius: 0 50px 50px 0;
+    text-align: right;
+}
+
+#mySidenav a:hover {
+    left: -40px;
+}
+
+#facebook {
+    top: 77vh;
+    background-color: #3B5998;
+}
+
+#instagram {
+    top: 90vh;
+    background-color: #3f729b;
+}
+
+#github {
+    top: 83.5vh;
+    background-color: #555
+}
+i{
+  font-size: 1.5rem;
 }

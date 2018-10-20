@@ -26,7 +26,7 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Robot Cing</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,10 @@
               <a class="nav-link js-scroll-trigger" href="#learnmore">Learn more</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#">kolonka</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#signup">Newsletter</a>
             </li>
           </ul>
         </div>
@@ -64,14 +67,22 @@
         </div>
       </div>
     </header>
-
+    <!-- Floating Social bar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="https://github.com/RobotCing/Cing"target="blank" id="github">Github          <i class="fab fa-github"></i></a>
+      <a href="#"target="blank" id="facebook">Facebook     <i class="fab fa-facebook"></i></a>
+      <a href="#"target="blank" id="instagram">Instagram     <i class="fab fa-instagram"></i></a>
+    </div>
     <!-- About Section -->
     <section id="about" class="about-section text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2 class="text-white mb-4">Educational tool</h2>
-            <p class="text-white-50">Robot Cing was designed to inspire people learning to write code to breath life and real personality into their own robot. He is loaded with tons of sensors allowing you to build thousands of possible behaviors. User do not need any knowlage about electronics because Robot Cing can be progammed using libraries. Combine it with learning materials and you will get robot which can be programmed by anybody.</p>
+            <p class="text-white-50">Robot Cing was designed to inspire people learning to write code to breath life and real personality
+              into their own robot. He is loaded with tons of sensors allowing you to build thousands of robots for example line followers.
+               User do not need any knowlage about electronics because Robot Cing can be progammed using libraries.
+                Combine it with learning materials and you will get robot which can be programmed by anybody.</p>
           </div>
         </div>
         <img src="img/educational_tool.png" class="img-fluid" alt="">
@@ -116,8 +127,6 @@
                     <li>Programming using MicroPython</li>
                     <li>Programming using AVR language</li>
                     <p class="mb-0 text-white-50">Take your first steps into written code. Perfect for students who already know Scratch, and even those completely new to coding.</p>
-
-                  <hr class="d-none d-lg-block mb-0 ml-0">
                 </div>
               </div>
             </div>
@@ -135,7 +144,6 @@
                 <div class="project-text w-100 my-auto text-center text-lg-right">
                   <h4 class="text-white">Modular design</h4>
                   <p class="mb-0 text-white-50">Robot Cing has modular design.It has lot of sensors and modules protected against wrong insertation.</p>
-                  <hr class="d-none d-lg-block mb-0 mr-0">
                 </div>
               </div>
             </div>
@@ -153,7 +161,6 @@
                 <div class="project-text w-100 my-auto text-center text-lg-left">
                   <h4 class="text-white">Custom Arduino Software</h4>
                   <p class="mb-0 text-white-50">We developed custom board manager for Robot Cing so users can upload code form Arduino IDE. We have also created libraries which simplifies programming.  </p>
-                  <hr class="d-none d-lg-block mb-0 ml-0">
                 </div>
               </div>
             </div>
@@ -176,7 +183,6 @@
                   <li>Ideal for classroom instruction and workshops</li>
                   <li>Suitable for ages 8+ and younger if working with a grownup</li>
                   <p class="mb-0 text-white-50"></p>
-                  <hr class="d-none d-lg-block mb-0 mr-0">
                 </div>
               </div>
             </div>
@@ -189,7 +195,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">Robot Cing - Learn to code with this entry level robot.</h2>
+            <h2 class="text-white mb-4">Robot Cing - Learn to code with this entry level robot</h2>
             <p class="text-white-50">Robot Cing is perfect for kids, students, and grownups taking their very first steps into written programming code. If you already know Scratch then you're ready to move on writing your own code. You'll learn the basics of the C language in an easy, non-complicated way.</p>
             <p class="text-white-50">Teachers and educators love our free lessons. They make it easy to learn on your own or lead classes and workshops, even if the teacher is new to coding as well.</p>
 
@@ -215,18 +221,16 @@
             <br>
             <br>
           </div>
+
         </div>
       </section>
-
 
     <section id="signup" class="signup-section">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-lg-8 mx-auto text-center">
-
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-
             <form class="form-inline d-flex">
               <input type="email" id=email_input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"  placeholder="Enter email address...">
               <button type="submit" onclick="send_email();" class="btn btn-primary mx-auto">Subscribe</button>
@@ -234,36 +238,22 @@
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section bg-black">
       <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-        <div class="social d-flex justify-content-center">
-          <a href="#" target="blank" class="mx-2">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" target="blank" class="mx-2">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://github.com/RobotCing/Cing" target="blank" class="mx-2">
-            <i class="fab fa-github"></i>
-          </a>
+            <div class="container text-center text-white copyright">
+              Copyright &copy; Robot Cing 2018
+            </div>
+          </div>
         </div>
-
       </div>
+
+
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-black small text-center text-white-50">
-      <div class="container">
-        Copyright &copy; Robot Cing 2018
-      </div>
-    </footer>
-
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
 
     <!-- Plugin JavaScript -->
@@ -271,14 +261,6 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.js"></script>
-
-    <script>
-
-    </script>
-
-
-
-    <script type="text/javascript" src="http://downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"fb5f1d4ca01b4aa73188e1bb8","lid":"b0a87d1022","uniqueMethods":true}) })</script>
 
   </body>
 
