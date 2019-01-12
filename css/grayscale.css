@@ -356,18 +356,18 @@ footer {
 }
 
 #facebook {
-    top: 77vh;
+    bottom: 150px;
     background-color: #3B5998;
 }
 
 #instagram {
-    top: 90vh;
+    bottom: 90px;
     background-color: #3f729b;
 }
 
 #github {
-    top: 83.5vh;
-    background-color: #555
+    bottom: 30px;
+    background-color: #555;
 }
 i{
   font-size: 1.5rem;
