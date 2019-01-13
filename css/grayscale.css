@@ -441,6 +441,7 @@ modals
 */
 
 .about_img{
+  width: 70%;
   border-radius: 50%;
   border: 10px solid rgb(0,0,0,0);
   position:relative !important;
