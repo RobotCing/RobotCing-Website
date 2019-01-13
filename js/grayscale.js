@@ -91,3 +91,14 @@ window.onclick = function(event) {
     modal2.style.display = "none";
   }
 }
+
+//getting_started button
+function copy_btn(text) {
+  var dummy = document.createElement("input");
+  document.body.appendChild(dummy);
+  dummy.setAttribute('value', text);
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+  alert("Board manager link copied.");
+}

@@ -1,6 +1,11 @@
 h2 {
   text-align: center;
 }
+.bars{
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+}
 #mainNav {
   min-height: 56px;
   background-color: #fff;
@@ -8,9 +13,7 @@ h2 {
 
 #mainNav .navbar-toggler {
   font-size: 80%;
-  padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #000000;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -18,10 +21,12 @@ h2 {
 }
 
 #mainNav .navbar-brand {
-  color: #3c6360;
+  color: #000000;
   font-weight: 700;
   padding: .9rem 0;
+  text-decoration: none;
 }
+
 
 #mainNav .navbar-nav .nav-item:hover {
   color: fade(white, 80%);
@@ -45,16 +50,19 @@ h2 {
   }
   #mainNav .navbar-brand {
     padding: .5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 1);
+  }
+  #mainNav.navbar-shrink .navbar-brand:hover {
+    text-decoration: underline;
   }
   #mainNav .nav-link {
     -webkit-transition: none;
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 1);
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(0, 0, 0, 0.75);
   }
   #mainNav .nav-link:active {
     color: white;
@@ -63,23 +71,21 @@ h2 {
     background-color: #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #161616;
+    color: rgb(0,0,0);
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #161616;
+    color: rgb(0,0,0);
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    text-decoration: underline;
   }
-  #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
-  }
+
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: rgb(0,0,0)
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #000000;
   }
 }
 
@@ -289,18 +295,21 @@ h2 {
   width: 5rem;
   opacity: 0.5;
 }
+.img-started:hover {
+  opacity: 1;
+}
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
 }
 
 a {
-  color: #64a19d;
+  color: rgb(0,0,0);
 }
 
-a:focus, a:hover {
-  text-decoration: none;
-  color: #3c6360;
+a:hover {
+  text-decoration: underline !important;
+  color: rgb(0,0,0) !important;
 }
 
 li {
@@ -323,14 +332,13 @@ li {
 
 footer {
   font-family: 'Varela Round';
-  font-size: 3rem;
-  letter-spacing: 2rem;
+  position:relative;
+  bottom:-10rem;
+  width:100%;
+  height:100px;
+  text-align: center;
 }
-.copyright {
-  margin-top: 15rem;
-  margin-bottom: -10rem;
-  font-size: 2rem;
-}
+
 
 
 #mySidenav a {
@@ -350,6 +358,7 @@ footer {
 
 #mySidenav a:hover {
     left: -40px;
+    text-decoration: none !important;
 }
 
 #facebook {
@@ -373,27 +382,39 @@ i{
 
 
 
+/*
+Getting started section
+*/
+button
+{
+  cursor:pointer;
+  background-color: gray;
+  padding:15px;
+  border: transparent;
+  margin: auto;
+  border-radius: 25px;
+}
+
 
 /*
-
 About us section
-
-
 */
 
+.bg{
+  /*background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);*/
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .masthead_ao {
   position: relative;
   width: 100%;
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/our-team.png");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/our-team.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+
 
 }
 
@@ -402,13 +423,18 @@ About us section
   font-family: 'Varela Round';
   font-size: 5.5rem;
   line-height: 4rem;
-  letter-spacing: 0.6rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  letter-spacing: 0.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 3.5rem;
+}
+.masthead_ao h2 {
+  font-family: 'Varela Round';
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 0.2rem;
   padding-top: 10px;
 }
-
 
 /*
 modals
@@ -416,20 +442,32 @@ modals
 
 .about_img{
   border-radius: 50%;
-  border: 10px solid rgb(0,0,0,0.2);
+  border: 10px solid rgb(0,0,0,0);
   position:relative !important;
   margin-bottom: 20px;
 }
+.about_img:hover{
+
+}
 .aboutbox{
   width: 100%;
-  padding: 10px;
+  padding-top: 100%
   text-align: center;
-  border-radius: 25px;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  color: rgb(255,255,255);
 }
-.aboutbox:hover{
+.aboutbox:hover {
+  color: rgb(0,0,0);
+  text-decoration: underline;
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+
+}
+/*.aboutbox:hover{
   background-color: rgb(0,0,0,0.5);
   border-radius: 25px;
-}
+}*/
 .modal {
   display: none;
   position: fixed;
