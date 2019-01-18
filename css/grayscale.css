@@ -102,7 +102,6 @@ h2 {
   background-size: cover;
 }
 
-
 .masthead h1 {
   font-family: 'Varela Round';
   font-size: 2.5rem;
@@ -111,7 +110,6 @@ h2 {
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-
 }
 
 .masthead h2 {
@@ -384,16 +382,22 @@ i{
 Getting started section
 */
 .button{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.5) !important;
   background: rgba(0, 0, 0, 0.5) !important;
-  background-blend-mode: multiply,multiply;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 .button_modal{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.5) !important;
   background: rgba(0, 0, 0, 0.5) !important;
-  background-blend-mode: multiply,multiply;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+.button_modal:hover{
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(0, 0, 0, 0.5) !important;
 }
 .button:hover{
   background-color: rgba(255, 255, 255, 0.8) !important;
@@ -505,8 +509,6 @@ About us section
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-
-
 }
 
 
@@ -550,7 +552,7 @@ modals
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
   color: rgb(255,255,255);
-
+  cursor: pointer;
 }
 .aboutbox:hover {
   text-decoration: underline;
