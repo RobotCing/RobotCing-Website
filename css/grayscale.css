@@ -61,9 +61,6 @@ h2 {
     padding: 2rem 1.5rem;
     color: rgba(255, 255, 255, 1);
   }
-  #mainNav .nav-link:hover {
-    color: rgba(0, 0, 0, 0.75);
-  }
   #mainNav .nav-link:active {
     color: white;
   }
@@ -80,10 +77,12 @@ h2 {
   }
   #mainNav.navbar-shrink .nav-link:hover {
     text-decoration: underline;
+    color: rgba(0, 0, 0, 1)!important;
+
   }
 
   #mainNav.navbar-shrink .nav-link.active {
-    color: rgb(0,0,0)
+    color: rgb(0,0,0);
     outline: none;
     border-bottom: 0.25rem solid #000000;
   }
@@ -304,12 +303,12 @@ body {
 }
 
 a {
-  color: rgb(0,0,0);
+  color:rgb(0,0,0);
 }
 
 a:hover {
+  color:rgb(0,0,0);
   text-decoration: underline !important;
-  color: rgb(0,0,0) !important;
 }
 
 li {
@@ -387,14 +386,14 @@ Getting started section
 */
 .button
 {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  background: rgba(0, 0, 0, 0.5) !important;
   background-blend-mode: multiply,multiply;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .button:hover{
-  background-color: #000 !important;
-  color: white !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(0, 0, 0, 0.5) !important;
 }
 
 /*
@@ -404,11 +403,9 @@ About us section
 .modal_header{
   color: rgb(0,0,0,0.5) !important;
   font-size: 2rem !important;
-  line-height: 2rem;
+  line-height: 2rem !important;
   letter-spacing: 0rem !important;
-  font-size: 2rem;
-  margin-bottom: 3rem !important;
-  padding-top: 2% !important;
+
 }
 
 .modal_info{
@@ -423,7 +420,8 @@ About us section
 
 .bg{
   /*background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);*/
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  /*background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;*/
+  background: linear-gradient(to bottom, rgba(25,25,25,1) 0%,rgba(69,72,77,1) 99%);
   background-blend-mode: multiply,multiply;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -444,7 +442,9 @@ About us section
   font-size: 5.5rem;
   line-height: 4rem;
   letter-spacing: 0.2rem;
-  color: white;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   padding-top: 10px;
   padding-bottom: 3.5rem;
 }
@@ -479,7 +479,6 @@ modals
 
 }
 .aboutbox:hover {
-  color: rgb(0,0,0);
   text-decoration: underline;
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
@@ -499,7 +498,7 @@ modals
   overflow: auto;
   border-radius: 25px;
   border: 1px;
-  background-color:rgb(255,255,255,0.95);
+  background-color:rgb(180,180,180,0.98);
   padding: 20px;
 }
 
@@ -507,12 +506,12 @@ modals
 
 .SJ_close:hover,
 .SJ_close:focus {
-  color: #000 !important;
+  color: rgba(255,255, 255, 0.95) !important;
   text-decoration: none;
   cursor: pointer;
 }
 .SJ_close {
-  color: #aaaaaa !important;
+  color: rgba(0, 0, 0, 0.5) !important;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -520,12 +519,12 @@ modals
 
 .VN_close:hover,
 .VN_close:focus {
-  color: #000 !important;
+  color: rgba(255,255, 255, 0.95) !important;
   text-decoration: none;
   cursor: pointer;
 }
 .VN_close {
-  color: #aaaaaa !important;
+  color: rgba(0, 0, 0, 0.5) !important;
   float: right;
   font-size: 28px;
   font-weight: bold;
