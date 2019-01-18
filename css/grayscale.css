@@ -380,12 +380,16 @@ i{
 
 
 
-
 /*
 Getting started section
 */
-.button
-{
+.button{
+  background: rgba(0, 0, 0, 0.5) !important;
+  background-blend-mode: multiply,multiply;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.button_modal{
   background: rgba(0, 0, 0, 0.5) !important;
   background-blend-mode: multiply,multiply;
   background-repeat: no-repeat;
@@ -395,6 +399,71 @@ Getting started section
   background-color: rgba(255, 255, 255, 0.8) !important;
   color: rgba(0, 0, 0, 0.5) !important;
 }
+
+
+.masthead_gs {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+}
+
+
+.masthead_gs h1 {
+  font-family: 'Varela Round';
+  font-size: 2.5rem;
+  line-height: 4rem;
+  letter-spacing: 0.6rem;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
+.masthead_gs h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .masthead_gs h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead_gs {
+    height: 100vh;
+    padding: 0;
+  }
+  .masthead_gs h1 {
+    font-size: 5.5rem;
+    line-height: 7rem;
+    letter-spacing: 0.6rem;
+  }
+  .masthead_gs h2 {
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 About us section
@@ -417,11 +486,15 @@ About us section
   padding-left: 10% !important;
   padding-right: 10% !important;
 }
+.modal_info li{
+  color: rgb(0,0,0,0.5) !important;
+  text-align: center;
+}
 
-.bg{
+.bg {
   /*background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);*/
   /*background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;*/
-  background: linear-gradient(to bottom, rgba(25,25,25,1) 0%,rgba(69,72,77,1) 99%);
+  background: linear-gradient(to bottom, rgba(10,10,10,1) 0%,rgba(49,52,57,1) 100%);
   background-blend-mode: multiply,multiply;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -467,8 +540,9 @@ modals
   position:relative !important;
   margin-bottom: 20px;
 }
-.about_img:hover{
-
+.about_img a:hover{
+  color:rgb(0,0,0);
+  text-decoration: underline !important;
 }
 .aboutbox{
   width: 100%;
