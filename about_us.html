@@ -103,6 +103,55 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
       </div>
     </header>
 
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center text-white text-uppercase mb-0">Contact us</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label class="text-white">Name</label>
+                  <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Write Name">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label class="text-white">Email Address</label>
+                  <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Write email address">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label class="text-white">Subject</label>
+                  <input class="form-control" id="phone" placeholder="Subject" required="required" data-validation-required-message="Write Subject">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label class="text-white">Message</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Write message"></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn button" id="sendMessageButton">Sent</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar fixed-top" id="mainNav">
       <div class="container">
@@ -148,7 +197,9 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.js"></script>
-
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.js"></script>
 
