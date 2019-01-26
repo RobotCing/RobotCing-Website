@@ -482,7 +482,9 @@ Getting started section
 /*
 About us section
 */
-
+#contact {
+  margin-top: -10rem;
+}
 .modal_header{
   color: rgb(0,0,0,0.5) !important;
   font-size: 2rem !important;
