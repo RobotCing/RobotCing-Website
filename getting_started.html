@@ -348,6 +348,179 @@
               v porte <b class="text-white">B</b>.
               Ak je hodnota väčšia, motor <b class="text-white">B</b> sa zapne.
             </p>
+
+          <h4 class="text-white">Comparing temperature</h4>
+          <p class="text-white-50">
+            V tejto kapitole si ukážeme, ako
+            naprogramovať robota Cing tak, aby
+            reagoval na zmenu teploty s využitím
+            tepelného senzora. Robot sa po zohriatí
+            senzora začne hýbať.
+            <ul class="text-white">Budeme potrebovať:
+              <li>Robota Cing</li>
+              <li>ICSP ASP programátor</li>
+              <li>Tepelný senzor</li>
+            </ul>
+            <b class="text-white">Strategy:</b>
+            <p class="text-white-50">
+              Robot Cing bude stáť pokiaľ sa
+              okolitá teplota nezvýši nad 30 °C.
+              Potom sa začne pohybovať dopredu.
+            </p>
+          </p>
+            <br>
+            <b class="text-white">Program:</b>
+            <script src="https://gist.github.com/StanislavJochman/50db930c8abb8fed78731bc2003d9c5f.js"></script>
+            <b class="text-white">Explenation:</b>
+            <p class="text-white-50">
+              V prvom a druhom riadku programu sú
+              príkazy určené pre programovacie
+              prostredie, ktoré povedia, že budeme
+              používať zjednodušené príkazy pre
+              Attiny85 (implementujú knižnicu
+              <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+              Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+              zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+              procese a opakujú sa.
+              V prvom riadku procedúry sa overuje
+              hodnota tepelného senzora.
+              Ak je jeho hodnota väčšia ako <b class="text-white">30</b>
+              stupňov, zapne motory v portoch <b class="text-white">A</b> a <b class="text-white">B</b>.
+              Ak je jeho hodnota menšia ako <b class="text-white">30</b>
+              stupňov, vypne motor v portoch <b class="text-white">AB</b>.
+            </p>
+
+          <h4 class="text-white">Comparing shine</h4>
+          <p class="text-white-50">
+            V tejto kapitole si vytvoríme program,
+            ktorým rozhýbeme robota Cing
+            pomocou senzora osvetlenia.
+            <ul class="text-white">Budeme potrebovať:
+              <li>Robota Cing</li>
+              <li>ICSP ASP programátor</li>
+              <li>Senzor osvetlenia(Shine senzor)</li>
+            </ul>
+            <b class="text-white">Strategy:</b>
+            <p class="text-white-50">
+              Robot Cing bude stáť. Ak osvetlíme
+              senzor osvetlenia na viac ako 50%, Cing
+              sa začne hýbať dopredu.
+            </p>
+          </p>
+            <br>
+            <b class="text-white">Program:</b>
+            <script src="https://gist.github.com/StanislavJochman/b957e1cbb69f8e0fce9d0c48b85574df.js"></script>
+            <b class="text-white">Explenation:</b>
+            <p class="text-white-50">
+              V prvom a druhom riadku programu sú
+              príkazy určené pre programovacie
+              prostredie, ktoré povedia, že budeme
+              používať zjednodušené príkazy pre
+              Attiny85 (implementujú knižnicu
+              <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+              Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+              zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+              procese a opakujú sa.
+              V deviatom riadku procedúry sa overuje
+              podmienka pre senzor osvetlenia.
+              Ak je osvetlený na viac ako <b class="text-white">20%</b>, robot
+              Cing pôjde dopredu na oboch
+              motoroch.
+              Ak podmienka splnená nie je, robot
+              Cing bude stáť.
+            </p>
+
+          <h4 class="text-white">Setting variable value</h4>
+          <p class="text-white-50">
+            V tejto kapitole budeme vytvárať
+            programy, pomocou ktorých bude Cing
+            počítať čiary a na základe toho
+            vykonávať ďalšie procesy.
+            <ul class="text-white">Budeme potrebovať:
+              <li>Robota Cing</li>
+              <li>ICSP ASP programátor</li>
+              <li>Potenciometer externý</li>
+            </ul>
+            <b class="text-white">Strategy:</b>
+            <p class="text-white-50">
+              Robot Cing pôjde dopredu, ak mu hodnotu
+              na potenciometri nastavíme na viac ako
+              50%. Ak bude hodnota nižšia ako 50%,
+              Cing bude stáť.
+            </p>
+          </p>
+            <br>
+            <b class="text-white">Program:</b>
+            DODAT
+            <b class="text-white">Explenation:</b>
+            <p class="text-white-50">
+              V prvom a druhom riadku programu sú
+              príkazy určené pre programovacie
+              prostredie, ktoré povedia, že budeme
+              používať zjednodušené príkazy pre
+              Attiny85 (implementujú knižnicu
+              <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+              Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+              zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+              procese a opakujú sa.
+              V deviatom riadku procedúry
+              overujeme, či je na potenciometri
+              nastavená hodnota vyššia ako <b class="text-white">50%</b>.
+              Ak je podmienka splnená, Cing pôjde
+              dopredu.
+              Ak podmienka splnená nie je, robot
+              ostane stáť.
+            </p>
+
+          <h4 class="text-white">Counting lines</h4>
+          <p class="text-white-50">
+            V tejto kapitole budeme vytvoríme
+            program, pomocou ktorého bude Cing
+            počítať čiary a na základe toho
+            vykonávať ďalšie procesy.
+            <ul class="text-white">Budeme potrebovať:
+              <li>Robota Cing</li>
+              <li>ICSP ASP programátor</li>
+              <li>Potenciometer externý</li>
+            </ul>
+            <b class="text-white">Strategy:</b>
+            <p class="text-white-50">
+              Robot Cing bude chodiť po plátne, na
+              ktorom bude mať niekoľko čiar.
+              Pomocou svetelného senzora
+              spočíta všetky čiary. Pokial nenapočíta
+               10 čiar pojde dopredu. Po napočítaní
+                10-tich čiar sa otoči a zastane.
+            </p>
+          </p>
+            <br>
+            <b class="text-white">Program:</b>
+            DODAT
+            <b class="text-white">Explenation:</b>
+            <p class="text-white-50">
+              V prvom a druhom riadku programu sú
+              príkazy určené pre programovacie
+              prostredie, ktoré povedia, že budeme
+              používať zjednodušené príkazy pre
+              Attiny85 (implementujú knižnicu
+              <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+              Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+              zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+              procese a opakujú sa.
+              V treťom riadku procedúry vytvárame
+              premennú <b class="text-white">x</b> s hodnotou <b class="text-white">0</b>.
+              V desiatom riadku zadávame
+              podmienku, ktorá hovorí, že program
+              v zátvorkách sa bude opakovať, pokiaľ <b class="text-white">x
+              &lt;=10</b>. Kým podmienka nebude splnená,
+              robot pôjde dopredu, pričom bude
+              overovať či svetelný senzor nenasnímal
+              čiaru.
+              Ak ju nasnímal <b class="text-white">x++</b> pridá premennej
+              hodnotu <b class="text-white">1</b>.
+              Ak <b class="text-white">x</b> nadobudne hodnotu <b class="text-white">10</b>, vykoná sa
+              proces v zátvorkách <b class="text-white">else</b>.
+            </p>
       </section>
 
 
