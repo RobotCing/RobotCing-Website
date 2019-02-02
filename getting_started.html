@@ -122,7 +122,197 @@
           používatelia môžu robota Cing
           programovať priamo v Arduino
           prostredí bez použitia knižnice.
+          V časti Attiny85 sa budeme zaoberať
+          programovaním zakladných algoritmov
+          pre robota Cing s Procesorom Attiny85.
         </p>
+        <!-- Part Section -->
+        <section id="Attiny85_components" class="components-section">
+          <div class="container">
+            <h2 class="text-white mb-4">Attiny85 components</h2>
+            <!-- component One Row -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+              <div class="col-lg-6">
+                <img class="img-fluid" src="img/GS/Components/MainBoard.png" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="bg-black text-center h-100 components">
+                  <div class="d-flex h-100">
+                    <div class="components-text w-100 my-auto text-center text-lg-left">
+                      <h4 class="text-white">Main Board</h4>
+                      <p class="mb-0 text-white-50">
+                        Robot Cing has 3 levels of programming.
+                        Take your first steps into written code.
+                         Perfect for students who already know
+                          basics of programming, and even those
+                           completely new to coding.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- component Two Row -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+              <div class="col-lg-6">
+                <img class="img-fluid" src="img/GS/Components/Attiny85.png" alt="">
+              </div>
+              <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 components">
+                  <div class="d-flex h-100">
+                    <div class="components-text w-100 my-auto text-center text-lg-left">
+                      <h4 class="text-white">Attiny85 processor</h4>
+                      <p class="mb-0 text-white-50">
+                        Attiny85 je procesor určený pre začiatočníkov.
+                        Má 8kb pamäte, 512B EEPROM, 512-Byte SRAM.
+                        Na programovnie slúži <a class="js-scroll-trigger text-white" href="#USBASP">USBASP programátor.</a>
+                      </p><br>
+                      <h4 class="text-white">Knižnice pre processor</h4>
+                      <ul class="text-white">
+                        <li><a class="js-scroll-trigger text-white" href="#Attiny85_IO_basic">Attiny85_IO_basic</a></li>
+                        <li><a class="js-scroll-trigger text-white" href="#Attiny85_IO">Attiny85_IO</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- component three Row -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+              <div class="col-lg-6">
+                <img class="img-fluid" src="img/GS/Components/TemperatureSensor.png" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="bg-black text-center h-100 components">
+                  <div class="d-flex h-100">
+                    <div class="components-text w-100 my-auto text-center text-lg-left">
+                      <h4 class="text-white">Tepelný senzor</h4>
+                      <p class="mb-0 text-white-50">
+                        Tento tepelný senzor slúži na meranie teploty okolitého prostredia.
+                        Pri procesoroch, ktoré podporujú UART je možné túto teplotu vypísať
+                         do počítača.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- component five Row -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+              <div class="col-lg-6">
+                <img class="img-fluid" src="img/GS/Components/PotentiometerExternal.png" alt="">
+              </div>
+              <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 components">
+                  <div class="d-flex h-100">
+                    <div class="components-text w-100 my-auto text-center text-lg-left">
+                      <h4 class="text-white">External potentiometer</h4>
+                      <p class="mb-0 text-white-50">
+                        Slúži na nastavenie hodnoty. Vracia hodnoty v rozmedzí 0-100%.
+                        Pri procesoroch, ktoré podporujú UART je možné túto teplotu vypísať do počítača.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- component six Row -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+              <div class="col-lg-6">
+                <img class="img-fluid" src="img/GS/Components/USBASP.png" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="bg-black text-center h-100 components">
+                  <div class="d-flex h-100">
+                    <div class="components-text w-100 my-auto text-center text-lg-left">
+                      <h4 id="USBASP" class="text-white">USBASP</h4>
+                      <p class="mb-0 text-white-50">
+                        USBASP slúži na programovanie robota Cing. Taktiež sa s ním nastavujú
+                        "fuses" na procesore, ktoré udávajú procesoru rýchlosť a konfiguráciu.
+                        Pre programovanie robota Cing sa tento programátor pripája do ISCP portu.
+                        Pri programovaní robota odporúčame vypnúť motory pomocou vypínača <b><a href="#MotorSwitch" class="text-white">MotorSwitch.</a></b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- component seven Row -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+              <div class="col-lg-6">
+                <img class="img-fluid" src="img/GS/Components/18650.png" alt="">
+              </div>
+              <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 components">
+                  <div class="d-flex h-100">
+                    <div class="components-text w-100 my-auto text-center text-lg-left">
+                      <h4 class="text-white">Battery</h4>
+                      <p class="mb-0 text-white-50">
+                        Ako batériu robot Cing používa protected 18650. Tá má nominálne napätie 3.7V.
+                        MainBoard obsahuje taktiež nabíjačku pre 3.7V batérie, avšak neobsahuje ochranu
+                         proti vybitu preto odporúčame použitie batérie protected 18650. Je však možné
+                         aj použitie báterie s vyšším napätím pomocou D konektoru avšak vtedy robot nedokáže batériu nabiť.
+                         Použitie sekundárnej batérie pre napájanie motorov je taktiež umožnené pomocou 2. D konektoru,
+                         ktorý sa nachádza pod DC boosterom. V prípade využitia tejto možnosti je nutné odobrať DC booster.
+                         Pri odpájaní batérii je odporúčané vypnúť vypínače <b><a href="#MotorSwitch" class="text-white">MotorSwitch</a></b>
+                         a <b><a href="#RobotSwitch" class="text-white">RobotSwitch.</a></b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <!-- Part Section -->
+
+        <section id="MainBoard" class="components-section">
+          <h4 class="text-white">MainBoard description</h4>
+          <p class="text-white-50">
+            MainBoard je hlavný plošný spoj robota Cing.
+             Prepája všetky komponenty a obsahuje aj niekoľko
+              základných senzorov. Obsahuje microUSB port, ktorý slúži na nabíjanie
+              batérie a pri pokročilejších procesoroch umožnuje vypisovanie hodnôt
+              do počítača. Taktiež obsahuje porty I2C, Serial, Header1 a Header 2, ktoré
+              slúžia na pripojenie ďalších senzorov a modulov. Porty ServoA,ServoB a ServoC
+              slúžia na pripojenie Servo motorov, prípadne regulátorov. MainBoard obsahuje
+              taktiež 4 individuálne adresovateľné RGB led diódy WS2812.
+          </p>
+          <ol class="text-white-50">Kompletný zoznam komponentov MainBoardu:
+            <li>Light sensors</li>
+            <li>Line sensor</li>
+            <li>Lipo Charger</li>
+            <li>Gyro</li>
+            <li>IR sensor</li>
+            <li>WS2812</li>
+            <li>Tlačidlo</li>
+            <li>Potenciometer</li>
+            <li>UART</li>
+            <li>Motor Driver</li>
+            <li>Barometric pressure sensor</li>
+            <li>Upevnenie svetelného Lego senzora</li>
+          </ol>
+
+
+
+          <div class="container">
+            <!-- component One Row -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+              <div class="col-lg-6">
+                <img class="img-fluid" src="img/GS/Components/MainBoard.png" alt="">
+              </div>
+              <div class="col-lg-6">
+                <img class="img-fluid" src="img/GS/Components/MainBoard2.png" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+
         <h4 class="text-white">Getting started with robot</h4>
         <p class="text-white-50">
           V tejto kapitole sa zoznámime
