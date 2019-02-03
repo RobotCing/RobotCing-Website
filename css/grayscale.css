@@ -382,9 +382,14 @@ i{
 /*
 Getting started section
 */
-
+.mainboard_components {
+  padding-bottom: 5rem;
+}
+.cing_components {
+  padding-bottom: 5rem;
+}
 .components-section {
-  padding: 10rem 0;
+  padding-bottom: 0rem 0;
 }
 
 .components-section .components-text {
