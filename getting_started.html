@@ -38,15 +38,15 @@
 
     <div class="container" id="gs">
       <section>
-        <h2 class="text-white mb-4">Common info</h2>
+        <h2 id="driver" class="text-white mb-4">Common info</h2>
 
         <h4 class="text-white">Installing environment</h4>
         <p class="text-white-50">
           Programovanie robota Cing je uskutočňované skrz Arduino IDE programovacie prostredie.
           Pre inštálaciu Arduino IDE prostredia postupujte podľa
-          <a href="https://www.arduino.cc/en/Guide/HomePage" class="text-white" target="_blank">návodu</a>.
+          <a style="text-decoration:underline" href="https://www.arduino.cc/en/Guide/HomePage" class="text-white" target="_blank">návodu</a>.
           V prípade, že používate Windows ako operačný systém je nutné stiahnuť a nainštalovať ovládače.
-          Po stiahnutí <a href="Download/zadig.exe" class="text-white" download="zadig.exe">ovládačov</a> otvorte
+          Po stiahnutí <a style="text-decoration:underline" href="Download/zadig.exe" class="text-white" download="zadig.exe">ovládačov</a> otvorte
           stiahnutý .exe súbor. Po otvorení pripojte USB ASP programátor do počítača a uistite sa, že svieti modrá led dióda ako na obrázku.
           <img class="img-fluid gs_images mx-auto d-block" src="img/GS/USBASPconected.jpg" alt="">
           Následne v options zvoľte možnosť "List All Devices". Z menu vyberte USBASP prípadne UNKNOWN. Ako driver zvoľte "libusb-win32" a stlačte "Install WCID Driver".
@@ -54,25 +54,25 @@
         </p>
         <h4 class="text-white">Setting up an enviroment</h4>
         <p class="text-white-50">
-          Po nainštalovaní Arduino IDE ho otvoríme. Otvoríme si File>>Preferences.
+          Po nainštalovaní Arduino IDE ho otvoríme. Otvoríme si <b class="text-white">File>>Preferences</b>.
 
           Otvorí sa nám niečo podobné ako na obrázku.
           <img class="img-fluid gs_images mx-auto d-block" src="img/GS/ArduinoPreferences.png" alt="">
-          Stlačte nasledové tlačidlo pre skopírovanie odkazu a vložte tento odkaz do poľa "Additional Boards Manager URLs:"
+          Stlačte nasledové tlačidlo pre skopírovanie odkazu a vložte tento odkaz do poľa <b class="text-white">Additional Boards Manager URLs:</b>
           <a class="btn button" onclick="copy_btn('https://raw.githubusercontent.com/RobotCing/Cing/master/Software/Packages/index/package_RobotCing_index.json')">Copy board manager link</a>
-          Po vložení linku stlačte "OK". Následne otvorte "Tools >> Board: a zvoľte Board manager...".
-          Po otvorení okna vyhľadajte "RobotCing" zvolte poslednú verziu a stlačte "Install".
+          Po vložení linku stlačte <b class="text-white">OK</b>. Následne otvorte <b class="text-white">Tools >> Board: a zvoľte Board manager...</b>.
+          Po otvorení okna vyhľadajte <b class="text-white">RobotCing</b> zvolte poslednú verziu a stlačte <b class="text-white">Install</b>.
           <img class="img-fluid gs_images mx-auto d-block" src="img/GS/BoardManager.png" alt="">
           Ako poslednú vec nainštalujeme knižnice. Knižnice sú pre každý procesor iné a preto odporúčame
           nainštalovanie knižníc len pre procesory, ktoré máte. Taktiež je potrebné nainštalovať:
           <ul>
-            <li><a class="js-scroll-trigger text-white" href="#DallasTemperature">DallasTemperature</a></li>
-            <li><a class="js-scroll-trigger text-white" href="#OneWire">OneWire</a></li>
-            <li><a class="js-scroll-trigger text-white" href="#AdafruitNeoPixel">Adafruit NeoPixel</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#DallasTemperature">DallasTemperature</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#OneWire">OneWire</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#AdafruitNeoPixel">Adafruit NeoPixel</a></li>
           </ul>
         </p>
         <p class="text-white-50">
-           Táto inštalácia je uskutočnovaná skrz "Sketch >> Include Library >> Manage Libraries" a následným vyhľadaním príslušnej knižnice a stlačením tlačidla "Install".
+           Táto inštalácia je uskutočnovaná skrz <b class="text-white">Sketch >> Include Library >> Manage Libraries</b> a následným vyhľadaním príslušnej knižnice a stlačením tlačidla <b class="text-white">Install</b>.
           <div id=DallasTemperature><img class="img-fluid gs_images mx-auto d-block"  src="img/GS/DallasTemperature.png" alt=""></div>
           <div id=OneWire><img class="img-fluid gs_images mx-auto d-block" src="img/GS/OneWire.png" alt=""></div>
           <div id=AdafruitNeoPixel><img class="img-fluid gs_images mx-auto d-block"  src="img/GS/AdafruitNeoPixel.png" alt=""></div>
@@ -80,17 +80,17 @@
         <p class="text-white-50">
           Knižnice pre jednotlivé procesory sú:
           <ul>
-            <li><a class="js-scroll-trigger text-white" href="#Attiny85_IO_basic">Attiny85_IO_basic</a></li>
-            <li><a class="js-scroll-trigger text-white" href="#Attiny85_IO">Attiny85_IO</a></li>
-            <li><a class="js-scroll-trigger text-white" href="#Attiny84_IO_basic">Attiny84_IO_basic</a></li>
-            <li><a class="js-scroll-trigger text-white" href="#Attiny84_IO">Attiny84_IO</a></li>
-            <li><a class="js-scroll-trigger text-white" href="#Atmega8_IO_basic">Atmega8_IO_basic</a></li>
-            <li><a class="js-scroll-trigger text-white" href="#Atmega8_IO">Atmega8_IO</a></li>
-            <li><a class="js-scroll-trigger text-white" href="#Atmega328">Atmega328</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#Attiny85_IO_basic">Attiny85_IO_basic</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#Attiny85_IO">Attiny85_IO</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#Attiny84_IO_basic">Attiny84_IO_basic</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#Attiny84_IO">Attiny84_IO</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#Atmega8_IO_basic">Atmega8_IO_basic</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#Atmega8_IO">Atmega8_IO</a></li>
+            <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#Atmega328">Atmega328</a></li>
           </ul>
         </p>
         <p class="text-white-50">
-           Táto inštalácia je uskutočnovaná skrz "Sketch >> Include Library >> Manage Libraries" a následným vyhľadaním príslušnej knižnice a stlačením tlačidla "Install".
+           Táto inštalácia je uskutočnovaná skrz <b class="text-white">Sketch >> Include Library >> Manage Libraries</b> a následným vyhľadaním príslušnej knižnice a stlačením tlačidla <b class="text-white">Install</b>.
           <div id=Attiny85_IO_basic><img class="img-fluid gs_images mx-auto d-block"  src="img/GS/Attiny85_IO_basic.png" alt=""></div>
           <div id=Attiny85_IO><img class="img-fluid gs_images mx-auto d-block" src="img/GS/Attiny85_IO.png" alt=""></div>
           <div id=Attiny84_IO_basic><img class="img-fluid gs_images mx-auto d-block"  src="img/GS/Attiny84_IO_basic.png" alt=""></div>
@@ -100,6 +100,30 @@
           <div id=Atmega328><img class="img-fluid gs_images mx-auto d-block"  src="img/GS/Atmega328_IO.png" alt=""></div>
         </p>
 
+      </section>
+      <section>
+        <h4 class="text-white">Using Arduino IDE</h4>
+        <p class="text-white-50">
+          Po nainštalovaní programovacieho prostredia Arduino IDE si ukážeme ako
+          nahrávať programy do robota Cing. Po otvorení Arduino IDE môžeme
+          vidieť editor, kde budeme písať kód. V tomto editore sa nachádza
+          <b class="text-white">void setup(){}</b> a <b class="text-white">void loop(){}</b>.
+          Program sa píše medzi <b class="text-white">{}</b> a za každým príkazom sa dáva bodkočiarka.
+          <b class="text-white">void setup(){}</b> sa spustí raz pri štarte mikrokontroléra.
+          Preto sa do <b class="text-white">void setup(){}</b> dávaju časti programu, ktoré
+          sa majú spustiť iba raz. <b class="text-white">void loop(){}</b> je časť programu
+          ktorá sa začne vykonávať po <b class="text-white">void setup(){}</b> a beží v
+          nekonečnom cykle. Do nej budeme písať väčšinu príkazov. Po naprogramovaní je potrebné
+          vybrať správny procesor. To urobíme skrz <b class="text-white">Tools>>Board</b> a zvolíme použitý procesor.
+          <img class="img-fluid gs_images mx-auto d-block"  src="img/GS/ArduinoIDE/ArduinoIDE_board.png" alt="">
+          Ako programátor zvolíme z menu <b class="text-white">Programmer:USBASP</b>. Pred prvým použitím procesora stlačímenu
+          <b class="text-white">Burn Bootloader</b>. To zabezpečí správne nastavenie procesora(nastaví sa tým jeho freqvencia a iné parametre).
+          Pre nahrávanie programu stlačíme <b class="text-white">Sketch>>Upload using programmer</b>. Po krátkej chvíli by sme mali vidieť
+          v dolnej lište <b class="text-white">Done uploading</b>. V prípade, že nahrávanie je neúspešné a obdržite hlášku
+          <b class="text-white">avrdude: error: could not find USB device...</b> skontrolujte pripojenie USBASP prípadne
+          <a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#driver">preinštalujte driver</a>.
+          V prípade, že obdržite hlášku <b class="text-white">avrdude: error: program enable: target doesn't answer...</b> skontrolujte pripojenie
+          USBASP do robota Cing.
       </section>
       <section>
 
@@ -166,12 +190,12 @@
                       <p class="mb-0 text-white-50">
                         Attiny85 je procesor určený pre začiatočníkov.
                         Má 8kb pamäte, 512B EEPROM, 512-Byte SRAM.
-                        Na programovnie slúži <a class="js-scroll-trigger text-white" href="#USBASP">USBASP programátor.</a>
+                        Na programovnie slúži <a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#USBASP">USBASP programátor.</a>
                       </p><br>
                       <h4 class="text-white">Knižnice pre processor</h4>
                       <ul class="text-white">
-                        <li><a class="js-scroll-trigger text-white" href="#Attiny85_IO_basic">Attiny85_IO_basic</a></li>
-                        <li><a class="js-scroll-trigger text-white" href="#Attiny85_IO">Attiny85_IO</a></li>
+                        <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#Attiny85_IO_basic">Attiny85_IO_basic</a></li>
+                        <li><a style="text-decoration:underline"class="js-scroll-trigger text-white" href="#Attiny85_IO">Attiny85_IO</a></li>
                       </ul>
                     </div>
                   </div>
@@ -723,20 +747,20 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#">About us</a>
+        <a style="text-decoration:underline"class="navbar-brand js-scroll-trigger" href="#">Getting started</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html">RobotCing</a>
+              <a style="text-decoration:underline"class="nav-link js-scroll-trigger" href="index.html">RobotCing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="getting_started.html">Getting started</a>
+              <a style="text-decoration:underline"class="nav-link js-scroll-trigger" href="getting_started.html">Getting started</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="about_us.html">About us</a>
+              <a style="text-decoration:underline"class="nav-link js-scroll-trigger" href="about_us.html">About us</a>
             </li>
           </ul>
         </div>
