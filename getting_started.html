@@ -226,6 +226,7 @@
         </section>
 
 
+
         <!-- Part Section -->
         <section class="cing_components components-section">
           <div class="container">
@@ -638,190 +639,37 @@
           </div>
         </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <h2 class="text-white mb-4">Attiny85</h2>
-        <h4 class="text-white">Getting started with robot</h4>
-        <p class="text-white-50">
-          V tejto kapitole sa zoznámime
-          s programovacím prostredím robota
-          Cing a naučíme robota Cing pohnúť sa
-          z miesta. Nebudeme používať žiadne
-          senzory, pretože našou úlohou bude
-          robota Cing rozhýbať.
-
-          <ul class="text-white">Budeme potrebovať:
-            <li>Robota Cing</li>
-            <li>ICSP ASP programátor</li>
-          </ul>
-        </p>
-        <h4 class="text-white"></h4>
-        <p class="text-white-50">
-
-        </p>
-        <h4 class="text-white">Going forward and left</h4>
-        <p class="text-white-50">
-          <b class="text-white">Strategy:</b>
-          Robot Cing sa bude pohybovať na
-          oboch motoroch dopredu, na pravom
-          motore doľava a na ľavom motore
-          doprava.
-        </p>
-          <br>
-          <b class="text-white">Program:</b>
-          <script src="https://gist.github.com/StanislavJochman/4527e424b834480a4ec932a0f6e6e134.js"></script>
-          <b class="text-white">Explenation:</b>
+        <section>
+          <h2 id="Attiny85" class="text-white mb-4">Attiny85</h2>
+          <h4 class="text-white">Getting started with robot</h4>
           <p class="text-white-50">
-            V prvom a druhom riadku programu sú
-            príkazy určené pre programovacie
-            prostredie, ktoré povedia, že budeme
-            používať zjednodušené príkazy pre
-            Attiny85 (implementujú knižnicu
-            <b class="text-white">&lt;Attiny85_IO_basic.h&gt;</b>).
-            Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
-            zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
-            procese a opakujú sa.
-            <b class="text-white">Attiny.motor (“A”, 1, “digital”)</b> ⇒
-            pomocou tohto príkazu robot Cing
-            zapne motor v porte <b class="text-white">“A”</b> na 100%
-            (1=100%). V prípade, že by v príkaze
-            bola v druhom parametri <b class="text-white">0</b>, motor sa
-            vypne (0=0%).
-            Prvý parameter, ktorý môže obsahovať
-            <b class="text-white">“A”</b>, <b class="text-white">”B”</b>, <b class="text-white">”AB”</b> určuje, pre ktorý
-            motor/motory sa vzťahujú nasledujúce
-            parametre príkazu.
-            Posledný parameter určuje spôsob
-            zapínania motoru (<b class="text-white">“digital”</b>, <b class="text-white">“analog”</b>).
-            V prípade, že je parameter nastavený
-            na “analog”, vieme motor regulovať od
-            <b class="text-white">0%</b> po <b class="text-white">100%</b>.
-            V nasledujúcom príkaze má motor
-            nastavený parameter na 33% ⇒
-            <b class="text-white">Attiny.motor(“A”, 33, ”analog”)</b>.
-            Príkaz <b class="text-white">delay (2000)</b> ⇒ čaká 2000 milisekúnd.
-            Ako si môžete vyskúšať, robot sa hýbe
-            dve sekundy smerom dopredu oboma
-            motormi, potom 500 milisekúnd
-            motorom <b class="text-white">“A”</b> dopredu, pričom motor
-            <b class="text-white">“B”</b> stojí.
-          </p>
+            V tejto kapitole sa zoznámime
+            s programovacím prostredím robota
+            Cing a naučíme robota Cing pohnúť sa
+            z miesta. Nebudeme používať žiadne
+            senzory, pretože našou úlohou bude
+            robota Cing rozhýbať.
 
-
-        <h4 class="text-white">Speeding up and slowing down</h4>
-        <p class="text-white-50">
-          <ul class="text-white">Budeme potrebovať:
-            <li>Robota Cing</li>
-            <li>ICSP ASP programátor</li>
-          </ul>
-          <b class="text-white">Strategy:</b>
-          <p class="text-white-50">Robot Cing bude postupne zvyšovať svoju rýchlosť a potom postupne spomaľovať.</p>
-        </p>
-          <br>
-          <b class="text-white">Program:</b>
-          <script src="https://gist.github.com/StanislavJochman/931d532340cd5bf167416fb12204982a.js"></script>
-          <b class="text-white">Explenation:</b>
-          <p class="text-white-50">
-            V prvom a druhom riadku programu sú
-            príkazy určené pre programovacie
-            prostredie, ktoré povedia, že budeme
-            používať zjednodušené príkazy pre
-            Attiny85 (implementujú knižnicu
-            <b class="text-white">&lt;Attiny85_IO_basic.h&gt;</b>).
-            Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
-            zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
-            procese a opakujú sa.
-            V deviatom riadku programu vytvárame
-            počítadlo, pre ktoré platí, že hodnota
-            <b class="text-white">x=0</b>, a kým je <b class="text-white">x&lt;100</b>, tak po každom
-            pohnutí sa robota sa ku x pripočíta <b class="text-white">1</b>.
-            Znamená to teda, že robot bude
-            postupne zrýchľovať z <b class="text-white">1%</b> na <b class="text-white">100%</b> na
-            parametri <b class="text-white">“analog”</b> a následne
-            spomaľovať zo <b class="text-white">100%</b> na <b class="text-white">0%</b> na
-            parametri <b class="text-white">“analog”</b>.
-          </p>
-
-        <h4 class="text-white">Speeding up and slowing down</h4>
-        <p class="text-white-50">
-          V tejto kapitole si ukážeme, ako
-          naprogramovať robota Cing, aby
-          postupne zrýchlil a spomalil.
-          <ul class="text-white">Budeme potrebovať:
-            <li>Robota Cing</li>
-            <li>ICSP ASP programátor</li>
-          </ul>
-          <b class="text-white">Strategy:</b>
-          <p class="text-white-50">Robot Cing si v cykle bude
-            zvyšovať rýchlosť od 0% po 100% a po dosiahnuí najvyššej
-             rýchlosti začne v dalšom cykle spomaľovať do úplneho zastavenia.
-           </p>
-        </p>
-          <br>
-          <b class="text-white">Program:</b>
-          <script src="https://gist.github.com/StanislavJochman/931d532340cd5bf167416fb12204982a.js"></script>
-          <b class="text-white">Explenation:</b>
-          <p class="text-white-50">
-            V prvom a druhom riadku programu sú
-            príkazy určené pre programovacie
-            prostredie, ktoré povedia, že budeme
-            používať zjednodušené príkazy pre
-            Attiny85 (implementujú knižnicu
-            <b class="text-white">&lt;Attiny85_IO_basic.h&gt;</b>).
-            Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
-            zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
-            procese a opakujú sa.
-            V deviatom riadku programu vytvárame
-            počítadlo, pre ktoré platí, že hodnota
-            <b class="text-white">x=0</b>, a kým je <b class="text-white">x&lt;100</b>, tak po každom
-            pohnutí sa robota sa ku x pripočíta <b class="text-white">1</b>.
-            Znamená to teda, že robot bude
-            postupne zrýchľovať z <b class="text-white">1%</b> na <b class="text-white">100%</b> na
-            parametri <b class="text-white">“analog”</b> a následne
-            spomaľovať zo <b class="text-white">100%</b> na <b class="text-white">0%</b> na
-            parametri <b class="text-white">“analog”.</b>
-          </p>
-
-          <h4 class="text-white">Line following using 1 sensor</h4>
-          <p class="text-white-50">
-            V tejto kapitole si ukážeme, ako
-            naprogramovať robota Cing, aby sa
-            pohyboval po čiare.
             <ul class="text-white">Budeme potrebovať:
-              <li>Robota Cing</li>
+              <li>Robota Cing s processorom Attiny85</li>
               <li>ICSP ASP programátor</li>
             </ul>
+          </p>
+          <h4 class="text-white"></h4>
+          <p class="text-white-50">
+
+          </p>
+          <h4 class="text-white">Going forward and left</h4>
+          <p class="text-white-50">
             <b class="text-white">Strategy:</b>
-            <p class="text-white-50">Robot Cing bude sledovať čiaru
-            senzorom tak, že ak svetelný senzor
-            nasníma čiaru na plátne, pohne pravým
-            motorom dopredu. Ak čiaru nenasníma,
-            pohne ľavým motorom.</p>
+            Robot Cing sa bude pohybovať na
+            oboch motoroch dopredu, na pravom
+            motore doľava a na ľavom motore
+            doprava.
           </p>
             <br>
             <b class="text-white">Program:</b>
-            <script src="https://gist.github.com/StanislavJochman/1e7d7ae4860ed1fc5d17932aa1da6953.js"></script>
+            <script src="https://gist.github.com/StanislavJochman/4527e424b834480a4ec932a0f6e6e134.js"></script>
             <b class="text-white">Explenation:</b>
             <p class="text-white-50">
               V prvom a druhom riadku programu sú
@@ -833,36 +681,45 @@
               Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
               zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
               procese a opakujú sa.
-              V deviatom riadku sa overuje hodnota
-              svetelného senzora – ak je jeho
-              hodnota rovná <b class="text-white">0</b>, vypne motor v porte <b class="text-white">B</b>
-              a zapne motor v porte <b class="text-white">A</b>. Ak je jeho
-              hodnota rovná <b class="text-white">1</b>, motor v porte <b class="text-white">A</b> sa
-              vypne a motor v porte <b class="text-white">B</b> sa zapne.
+              <b class="text-white">Attiny.motor (“A”, 1, “digital”)</b> ⇒
+              pomocou tohto príkazu robot Cing
+              zapne motor v porte <b class="text-white">“A”</b> na 100%
+              (1=100%). V prípade, že by v príkaze
+              bola v druhom parametri <b class="text-white">0</b>, motor sa
+              vypne (0=0%).
+              Prvý parameter, ktorý môže obsahovať
+              <b class="text-white">“A”</b>, <b class="text-white">”B”</b>, <b class="text-white">”AB”</b> určuje, pre ktorý
+              motor/motory sa vzťahujú nasledujúce
+              parametre príkazu.
+              Posledný parameter určuje spôsob
+              zapínania motoru (<b class="text-white">“digital”</b>, <b class="text-white">“analog”</b>).
+              V prípade, že je parameter nastavený
+              na “analog”, vieme motor regulovať od
+              <b class="text-white">0%</b> po <b class="text-white">100%</b>.
+              V nasledujúcom príkaze má motor
+              nastavený parameter na 33% ⇒
+              <b class="text-white">Attiny.motor(“A”, 33, ”analog”)</b>.
+              Príkaz <b class="text-white">delay (2000)</b> ⇒ čaká 2000 milisekúnd.
+              Ako si môžete vyskúšať, robot sa hýbe
+              dve sekundy smerom dopredu oboma
+              motormi, potom 500 milisekúnd
+              motorom <b class="text-white">“A”</b> dopredu, pričom motor
+              <b class="text-white">“B”</b> stojí.
             </p>
 
-          <h4 class="text-white">Line following using 2 sensors</h4>
+
+          <h4 class="text-white">Speeding up and slowing down</h4>
           <p class="text-white-50">
-            V tejto kapitole si ukážeme, ako
-            naprogramovať robota Cing, aby sa
-            pohyboval po čiare pomocou 2 senzorov.
             <ul class="text-white">Budeme potrebovať:
-              <li>Robota Cing</li>
+              <li>Robota Cing s processorom Attiny85</li>
               <li>ICSP ASP programátor</li>
             </ul>
             <b class="text-white">Strategy:</b>
-            <p class="text-white-50">
-              Robot Cing bude sledovať čiaru
-              pomocou dvoch svetelných senzorov.
-              Oba motory idú dopredu, pokiaľ jeden
-              zo svetelných senzorov nenasníma
-              čiaru. Ak ju nasníma, motor na tej
-              strane sa zastaví.
-            </p>
+            <p class="text-white-50">Robot Cing bude postupne zvyšovať svoju rýchlosť a potom postupne spomaľovať.</p>
           </p>
             <br>
             <b class="text-white">Program:</b>
-            <script src="https://gist.github.com/StanislavJochman/977724974d78c0c1cefc4aa4449d39f8.js"></script>
+            <script src="https://gist.github.com/StanislavJochman/931d532340cd5bf167416fb12204982a.js"></script>
             <b class="text-white">Explenation:</b>
             <p class="text-white-50">
               V prvom a druhom riadku programu sú
@@ -874,42 +731,35 @@
               Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
               zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
               procese a opakujú sa.
-              V deviatom riadku sa overuje
-              podmienka pre svetelný senzor v porte
-              <b class="text-white">1</b>, teda či je jeho hodnota menšia ako <b class="text-white">1</b>.
-              Ak je jeho hodnota <b class="text-white">&lt;1</b>, zastaví motor
-              v porte <b class="text-white">A</b>.
-              Ak je hodnota väčšia, motor v porte
-              <b class="text-white">A</b> zapne.
-              V treťom riadku sa overuje podmienka
-              pre druhý svetelný senzor – v porte <b class="text-white">2</b>.
-              Ak je jeho hodnota <b class="text-white">&lt;1</b>, zastaví motor
-              v porte <b class="text-white">B</b>.
-              Ak je hodnota väčšia, motor <b class="text-white">B</b> sa zapne.
+              V deviatom riadku programu vytvárame
+              počítadlo, pre ktoré platí, že hodnota
+              <b class="text-white">x=0</b>, a kým je <b class="text-white">x&lt;100</b>, tak po každom
+              pohnutí sa robota sa ku x pripočíta <b class="text-white">1</b>.
+              Znamená to teda, že robot bude
+              postupne zrýchľovať z <b class="text-white">1%</b> na <b class="text-white">100%</b> na
+              parametri <b class="text-white">“analog”</b> a následne
+              spomaľovať zo <b class="text-white">100%</b> na <b class="text-white">0%</b> na
+              parametri <b class="text-white">“analog”</b>.
             </p>
 
-          <h4 class="text-white">Comparing temperature</h4>
+          <h4 class="text-white">Speeding up and slowing down</h4>
           <p class="text-white-50">
             V tejto kapitole si ukážeme, ako
-            naprogramovať robota Cing tak, aby
-            reagoval na zmenu teploty s využitím
-            tepelného senzora. Robot sa po zohriatí
-            senzora začne hýbať.
+            naprogramovať robota Cing, aby
+            postupne zrýchlil a spomalil.
             <ul class="text-white">Budeme potrebovať:
-              <li>Robota Cing</li>
+              <li>Robota Cing s processorom Attiny85</li>
               <li>ICSP ASP programátor</li>
-              <li>Tepelný senzor</li>
             </ul>
             <b class="text-white">Strategy:</b>
-            <p class="text-white-50">
-              Robot Cing bude stáť pokiaľ sa
-              okolitá teplota nezvýši nad 30 °C.
-              Potom sa začne pohybovať dopredu.
-            </p>
+            <p class="text-white-50">Robot Cing si v cykle bude
+              zvyšovať rýchlosť od 0% po 100% a po dosiahnuí najvyššej
+               rýchlosti začne v dalšom cykle spomaľovať do úplneho zastavenia.
+             </p>
           </p>
             <br>
             <b class="text-white">Program:</b>
-            <script src="https://gist.github.com/StanislavJochman/50db930c8abb8fed78731bc2003d9c5f.js"></script>
+            <script src="https://gist.github.com/StanislavJochman/931d532340cd5bf167416fb12204982a.js"></script>
             <b class="text-white">Explenation:</b>
             <p class="text-white-50">
               V prvom a druhom riadku programu sú
@@ -917,150 +767,351 @@
               prostredie, ktoré povedia, že budeme
               používať zjednodušené príkazy pre
               Attiny85 (implementujú knižnicu
-              <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+              <b class="text-white">&lt;Attiny85_IO_basic.h&gt;</b>).
               Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
               zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
               procese a opakujú sa.
-              V prvom riadku procedúry sa overuje
-              hodnota tepelného senzora.
-              Ak je jeho hodnota väčšia ako <b class="text-white">30</b>
-              stupňov, zapne motory v portoch <b class="text-white">A</b> a <b class="text-white">B</b>.
-              Ak je jeho hodnota menšia ako <b class="text-white">30</b>
-              stupňov, vypne motor v portoch <b class="text-white">AB</b>.
+              V deviatom riadku programu vytvárame
+              počítadlo, pre ktoré platí, že hodnota
+              <b class="text-white">x=0</b>, a kým je <b class="text-white">x&lt;100</b>, tak po každom
+              pohnutí sa robota sa ku x pripočíta <b class="text-white">1</b>.
+              Znamená to teda, že robot bude
+              postupne zrýchľovať z <b class="text-white">1%</b> na <b class="text-white">100%</b> na
+              parametri <b class="text-white">“analog”</b> a následne
+              spomaľovať zo <b class="text-white">100%</b> na <b class="text-white">0%</b> na
+              parametri <b class="text-white">“analog”.</b>
             </p>
 
-          <h4 class="text-white">Comparing shine</h4>
-          <p class="text-white-50">
-            V tejto kapitole si vytvoríme program,
-            ktorým rozhýbeme robota Cing
-            pomocou senzora osvetlenia.
-            <ul class="text-white">Budeme potrebovať:
-              <li>Robota Cing</li>
-              <li>ICSP ASP programátor</li>
-              <li>Senzor osvetlenia(Shine senzor)</li>
-            </ul>
-            <b class="text-white">Strategy:</b>
+            <h4 class="text-white">Line following using 1 sensor</h4>
             <p class="text-white-50">
-              Robot Cing bude stáť. Ak osvetlíme
-              senzor osvetlenia na viac ako 50%, Cing
-              sa začne hýbať dopredu.
+              V tejto kapitole si ukážeme, ako
+              naprogramovať robota Cing, aby sa
+              pohyboval po čiare.
+              <ul class="text-white">Budeme potrebovať:
+                <li>Robota Cing s processorom Attiny85</li>
+                <li>ICSP ASP programátor</li>
+              </ul>
+              <b class="text-white">Strategy:</b>
+              <p class="text-white-50">Robot Cing bude sledovať čiaru
+              senzorom tak, že ak svetelný senzor
+              nasníma čiaru na plátne, pohne pravým
+              motorom dopredu. Ak čiaru nenasníma,
+              pohne ľavým motorom.</p>
             </p>
+              <br>
+              <b class="text-white">Program:</b>
+              <script src="https://gist.github.com/StanislavJochman/1e7d7ae4860ed1fc5d17932aa1da6953.js"></script>
+              <b class="text-white">Explenation:</b>
+              <p class="text-white-50">
+                V prvom a druhom riadku programu sú
+                príkazy určené pre programovacie
+                prostredie, ktoré povedia, že budeme
+                používať zjednodušené príkazy pre
+                Attiny85 (implementujú knižnicu
+                <b class="text-white">&lt;Attiny85_IO_basic.h&gt;</b>).
+                Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+                zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+                procese a opakujú sa.
+                V deviatom riadku sa overuje hodnota
+                svetelného senzora – ak je jeho
+                hodnota rovná <b class="text-white">0</b>, vypne motor v porte <b class="text-white">B</b>
+                a zapne motor v porte <b class="text-white">A</b>. Ak je jeho
+                hodnota rovná <b class="text-white">1</b>, motor v porte <b class="text-white">A</b> sa
+                vypne a motor v porte <b class="text-white">B</b> sa zapne.
+              </p>
+
+            <h4 class="text-white">Line following using 2 sensors</h4>
+            <p class="text-white-50">
+              V tejto kapitole si ukážeme, ako
+              naprogramovať robota Cing, aby sa
+              pohyboval po čiare pomocou 2 senzorov.
+              <ul class="text-white">Budeme potrebovať:
+                <li>Robota Cing s processorom Attiny85</li>
+                <li>ICSP ASP programátor</li>
+              </ul>
+              <b class="text-white">Strategy:</b>
+              <p class="text-white-50">
+                Robot Cing bude sledovať čiaru
+                pomocou dvoch svetelných senzorov.
+                Oba motory idú dopredu, pokiaľ jeden
+                zo svetelných senzorov nenasníma
+                čiaru. Ak ju nasníma, motor na tej
+                strane sa zastaví.
+              </p>
+            </p>
+              <br>
+              <b class="text-white">Program:</b>
+              <script src="https://gist.github.com/StanislavJochman/977724974d78c0c1cefc4aa4449d39f8.js"></script>
+              <b class="text-white">Explenation:</b>
+              <p class="text-white-50">
+                V prvom a druhom riadku programu sú
+                príkazy určené pre programovacie
+                prostredie, ktoré povedia, že budeme
+                používať zjednodušené príkazy pre
+                Attiny85 (implementujú knižnicu
+                <b class="text-white">&lt;Attiny85_IO_basic.h&gt;</b>).
+                Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+                zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+                procese a opakujú sa.
+                V deviatom riadku sa overuje
+                podmienka pre svetelný senzor v porte
+                <b class="text-white">1</b>, teda či je jeho hodnota menšia ako <b class="text-white">1</b>.
+                Ak je jeho hodnota <b class="text-white">&lt;1</b>, zastaví motor
+                v porte <b class="text-white">A</b>.
+                Ak je hodnota väčšia, motor v porte
+                <b class="text-white">A</b> zapne.
+                V treťom riadku sa overuje podmienka
+                pre druhý svetelný senzor – v porte <b class="text-white">2</b>.
+                Ak je jeho hodnota <b class="text-white">&lt;1</b>, zastaví motor
+                v porte <b class="text-white">B</b>.
+                Ak je hodnota väčšia, motor <b class="text-white">B</b> sa zapne.
+              </p>
+
+            <h4 class="text-white">Comparing temperature</h4>
+            <p class="text-white-50">
+              V tejto kapitole si ukážeme, ako
+              naprogramovať robota Cing tak, aby
+              reagoval na zmenu teploty s využitím
+              tepelného senzora. Robot sa po zohriatí
+              senzora začne hýbať.
+              <ul class="text-white">Budeme potrebovať:
+                <li>Robota Cing s processorom Attiny85</li>
+                <li>ICSP ASP programátor</li>
+                <li>Tepelný senzor</li>
+              </ul>
+              <b class="text-white">Strategy:</b>
+              <p class="text-white-50">
+                Robot Cing bude stáť pokiaľ sa
+                okolitá teplota nezvýši nad 30 °C.
+                Potom sa začne pohybovať dopredu.
+              </p>
+            </p>
+              <br>
+              <b class="text-white">Program:</b>
+              <script src="https://gist.github.com/StanislavJochman/50db930c8abb8fed78731bc2003d9c5f.js"></script>
+              <b class="text-white">Explenation:</b>
+              <p class="text-white-50">
+                V prvom a druhom riadku programu sú
+                príkazy určené pre programovacie
+                prostredie, ktoré povedia, že budeme
+                používať zjednodušené príkazy pre
+                Attiny85 (implementujú knižnicu
+                <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+                Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+                zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+                procese a opakujú sa.
+                V prvom riadku procedúry sa overuje
+                hodnota tepelného senzora.
+                Ak je jeho hodnota väčšia ako <b class="text-white">30</b>
+                stupňov, zapne motory v portoch <b class="text-white">A</b> a <b class="text-white">B</b>.
+                Ak je jeho hodnota menšia ako <b class="text-white">30</b>
+                stupňov, vypne motor v portoch <b class="text-white">AB</b>.
+              </p>
+
+            <h4 class="text-white">Comparing shine</h4>
+            <p class="text-white-50">
+              V tejto kapitole si vytvoríme program,
+              ktorým rozhýbeme robota Cing
+              pomocou senzora osvetlenia.
+              <ul class="text-white">Budeme potrebovať:
+                <li>Robota Cing s processorom Attiny85</li>
+                <li>ICSP ASP programátor</li>
+                <li>Senzor osvetlenia(Shine senzor)</li>
+              </ul>
+              <b class="text-white">Strategy:</b>
+              <p class="text-white-50">
+                Robot Cing bude stáť. Ak osvetlíme
+                senzor osvetlenia na viac ako 50%, Cing
+                sa začne hýbať dopredu.
+              </p>
+            </p>
+              <br>
+              <b class="text-white">Program:</b>
+              <script src="https://gist.github.com/StanislavJochman/b957e1cbb69f8e0fce9d0c48b85574df.js"></script>
+              <b class="text-white">Explenation:</b>
+              <p class="text-white-50">
+                V prvom a druhom riadku programu sú
+                príkazy určené pre programovacie
+                prostredie, ktoré povedia, že budeme
+                používať zjednodušené príkazy pre
+                Attiny85 (implementujú knižnicu
+                <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+                Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+                zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+                procese a opakujú sa.
+                V deviatom riadku procedúry sa overuje
+                podmienka pre senzor osvetlenia.
+                Ak je osvetlený na viac ako <b class="text-white">20%</b>, robot
+                Cing pôjde dopredu na oboch
+                motoroch.
+                Ak podmienka splnená nie je, robot
+                Cing bude stáť.
+              </p>
+
+            <h4 class="text-white">Setting variable value</h4>
+            <p class="text-white-50">
+              V tejto kapitole budeme vytvárať
+              programy, pomocou ktorých bude Cing
+              počítať čiary a na základe toho
+              vykonávať ďalšie procesy.
+              <ul class="text-white">Budeme potrebovať:
+                <li>Robota Cing s processorom Attiny85</li>
+                <li>ICSP ASP programátor</li>
+                <li>Potenciometer externý</li>
+              </ul>
+              <b class="text-white">Strategy:</b>
+              <p class="text-white-50">
+                Robot Cing pôjde dopredu, ak mu hodnotu
+                na potenciometri nastavíme na viac ako
+                50%. Ak bude hodnota nižšia ako 50%,
+                Cing bude stáť.
+              </p>
+            </p>
+              <br>
+              <b class="text-white">Program:</b>
+              <script src="https://gist.github.com/StanislavJochman/e77224cbaa33cbb8c08799b9f9ca238c.js"></script>
+              <b class="text-white">Explenation:</b>
+              <p class="text-white-50">
+                V prvom a druhom riadku programu sú
+                príkazy určené pre programovacie
+                prostredie, ktoré povedia, že budeme
+                používať zjednodušené príkazy pre
+                Attiny85 (implementujú knižnicu
+                <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+                Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+                zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+                procese a opakujú sa.
+                V deviatom riadku procedúry
+                overujeme, či je na potenciometri
+                nastavená hodnota vyššia ako <b class="text-white">50%</b>.
+                Ak je podmienka splnená, Cing pôjde
+                dopredu.
+                Ak podmienka splnená nie je, robot
+                ostane stáť.
+              </p>
+
+            <h4 class="text-white">Counting lines</h4>
+            <p class="text-white-50">
+              V tejto kapitole budeme vytvoríme
+              program, pomocou ktorého bude Cing
+              počítať čiary a na základe toho
+              vykonávať ďalšie procesy.
+              <ul class="text-white">Budeme potrebovať:
+                <li>Robota Cing s processorom Attiny85</li>
+                <li>ICSP ASP programátor</li>
+                <li>Potenciometer externý</li>
+              </ul>
+              <b class="text-white">Strategy:</b>
+              <p class="text-white-50">
+                Robot Cing bude chodiť po plátne, na
+                ktorom bude mať niekoľko čiar.
+                Pomocou svetelného senzora
+                spočíta všetky čiary. Pokial nenapočíta
+                 10 čiar pojde dopredu. Po napočítaní
+                  10-tich čiar sa otoči a zastane.
+              </p>
+            </p>
+              <br>
+              <b class="text-white">Program:</b>
+              <script src="https://gist.github.com/StanislavJochman/00bd306f8d573ac4b4d4d3fdf0e699f3.js"></script>
+              <b class="text-white">Explenation:</b>
+              <p class="text-white-50">
+                V prvom a druhom riadku programu sú
+                príkazy určené pre programovacie
+                prostredie, ktoré povedia, že budeme
+                používať zjednodušené príkazy pre
+                Attiny85 (implementujú knižnicu
+                <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+                Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
+                zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
+                procese a opakujú sa.
+                V treťom riadku procedúry vytvárame
+                premennú <b class="text-white">x</b> s hodnotou <b class="text-white">0</b>.
+                V desiatom riadku zadávame
+                podmienku, ktorá hovorí, že program
+                v zátvorkách sa bude opakovať, pokiaľ <b class="text-white">x
+                &lt;=10</b>. Kým podmienka nebude splnená,
+                robot pôjde dopredu, pričom bude
+                overovať či svetelný senzor nenasnímal
+                čiaru.
+                Ak ju nasnímal <b class="text-white">x++</b> pridá premennej
+                hodnotu <b class="text-white">1</b>.
+                Ak <b class="text-white">x</b> nadobudne hodnotu <b class="text-white">10</b>, vykoná sa
+                proces v zátvorkách <b class="text-white">else</b>.
+              </p>
+        </section>
+
+
+        <section>
+          <h2 id="Attiny84" class="text-white mb-4">Attiny84</h2>
+          <p class="text-white-50">
+            V prvej časti zo série robota Cing sme si ukázali
+            najzákladnejšie pohyby robota, pohyby vpred a do strán
+            a tiež sme si vyskúšali prácu z rôznymi senzormi
+            a parametrami.
+            V tejto príručke si ukážeme, ako vylepšiť pohyby,
+            vytvárať zložitejšie príkazy, vyskúšame si prácu s novými
+            senzormi či komponentmi a naučíme sa, ako správne
+            používať príkazy. Navyše ku kapitolám pribudnú úlohy,
+            takže sa nemusíte obávať, že by toho bolo málo.
+            Opäť sa budeme vzdelávať hravou a zábavnou formu.
+            Nemusíte sa báť, že to bude ťažké – práve naopak!
+            Vďaka poznatkom a vedomostiam z predchádzajúcej
+            časti to bude ešte jednoduchšie!
+          </p>
+          <h4 class="text-white">Pokračujeme v pohybe</h4>
+          <p class="text-white-50">
+
+            V predchádzajúcej časti sme sa zoznámili
+            s programovacím prostredím robota Cing a naučili
+            robota Cing pohnúť sa z miesta. S týmto procesorom
+            však pribudla aj funkcia cúvania. V tejto kapitole si
+            ukážeme, ako naprogramovať Cinga tak, aby sa hýbal
+            nielen dopredu, ale aj dozadu.
+            <ul class="text-white">Budeme potrebovať:
+              <li>Robota Cing s processorom Attiny84</li>
+              <li>ICSP ASP programátor</li>
+            </ul>
+          </p>
+          <h4 class="text-white"></h4>
+          <p class="text-white-50">
+
+          </p>
+          <h4 class="text-white">Going backward and forward</h4>
+          <p class="text-white-50">
+            <b class="text-white">Strategy:</b>
+            Robot Cing sa bude pohybovať na oboch
+            motoroch dopredu nejakú dobu, a potom cúvne naspäť
+            dozadu.
           </p>
             <br>
             <b class="text-white">Program:</b>
-            <script src="https://gist.github.com/StanislavJochman/b957e1cbb69f8e0fce9d0c48b85574df.js"></script>
+            <script src="https://gist.github.com/StanislavJochman/af848a825671b8b5700827bc62cb63b5.js"></script>
             <b class="text-white">Explenation:</b>
             <p class="text-white-50">
               V prvom a druhom riadku programu sú
               príkazy určené pre programovacie
               prostredie, ktoré povedia, že budeme
               používať zjednodušené príkazy pre
-              Attiny85 (implementujú knižnicu
-              <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
+              Attiny84 (implementujú knižnicu
+              <b class="text-white">&lt;Attiny84_IO_basic.h&gt;</b>).
               Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
               zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
               procese a opakujú sa.
-              V deviatom riadku procedúry sa overuje
-              podmienka pre senzor osvetlenia.
-              Ak je osvetlený na viac ako <b class="text-white">20%</b>, robot
-              Cing pôjde dopredu na oboch
-              motoroch.
-              Ak podmienka splnená nie je, robot
-              Cing bude stáť.
+              V šiestom riadku programu zapíname motory v portoch
+              <b class="text-white">“AB“</b> na <b class="text-white">1000</b> milisekúnd (1 sekundu). Potom tieto
+              motory zapneme na parameter <b class="text-white">-1</b>, čo znamená, že
+              motory v portoch <b class="text-white">“AB“</b> pôjdu aj naďalej, avšak nie
+              dopredu, ale dozadu. Teda na rozlíšenie smeru pohybu
+              kolies používame znamienko <b class="text-white">-</b>.
+              Ak ku parametru nedáme znamienko, znamená to, že sa
+              robot bude hýbať dopredu.
             </p>
 
-          <h4 class="text-white">Setting variable value</h4>
-          <p class="text-white-50">
-            V tejto kapitole budeme vytvárať
-            programy, pomocou ktorých bude Cing
-            počítať čiary a na základe toho
-            vykonávať ďalšie procesy.
-            <ul class="text-white">Budeme potrebovať:
-              <li>Robota Cing</li>
-              <li>ICSP ASP programátor</li>
-              <li>Potenciometer externý</li>
-            </ul>
-            <b class="text-white">Strategy:</b>
-            <p class="text-white-50">
-              Robot Cing pôjde dopredu, ak mu hodnotu
-              na potenciometri nastavíme na viac ako
-              50%. Ak bude hodnota nižšia ako 50%,
-              Cing bude stáť.
-            </p>
-          </p>
-            <br>
-            <b class="text-white">Program:</b>
-            <script src="https://gist.github.com/StanislavJochman/e77224cbaa33cbb8c08799b9f9ca238c.js"></script>
-            <b class="text-white">Explenation:</b>
-            <p class="text-white-50">
-              V prvom a druhom riadku programu sú
-              príkazy určené pre programovacie
-              prostredie, ktoré povedia, že budeme
-              používať zjednodušené príkazy pre
-              Attiny85 (implementujú knižnicu
-              <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
-              Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
-              zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
-              procese a opakujú sa.
-              V deviatom riadku procedúry
-              overujeme, či je na potenciometri
-              nastavená hodnota vyššia ako <b class="text-white">50%</b>.
-              Ak je podmienka splnená, Cing pôjde
-              dopredu.
-              Ak podmienka splnená nie je, robot
-              ostane stáť.
-            </p>
 
-          <h4 class="text-white">Counting lines</h4>
-          <p class="text-white-50">
-            V tejto kapitole budeme vytvoríme
-            program, pomocou ktorého bude Cing
-            počítať čiary a na základe toho
-            vykonávať ďalšie procesy.
-            <ul class="text-white">Budeme potrebovať:
-              <li>Robota Cing</li>
-              <li>ICSP ASP programátor</li>
-              <li>Potenciometer externý</li>
-            </ul>
-            <b class="text-white">Strategy:</b>
-            <p class="text-white-50">
-              Robot Cing bude chodiť po plátne, na
-              ktorom bude mať niekoľko čiar.
-              Pomocou svetelného senzora
-              spočíta všetky čiary. Pokial nenapočíta
-               10 čiar pojde dopredu. Po napočítaní
-                10-tich čiar sa otoči a zastane.
-            </p>
-          </p>
-            <br>
-            <b class="text-white">Program:</b>
-            <script src="https://gist.github.com/StanislavJochman/00bd306f8d573ac4b4d4d3fdf0e699f3.js"></script>
-            <b class="text-white">Explenation:</b>
-            <p class="text-white-50">
-              V prvom a druhom riadku programu sú
-              príkazy určené pre programovacie
-              prostredie, ktoré povedia, že budeme
-              používať zjednodušené príkazy pre
-              Attiny85 (implementujú knižnicu
-              <b class="text-white">&lt;Attiny85_IO.h&gt;</b>).
-              Príkazy vo <b class="text-white">void loop(){}</b> v svorkových
-              zátvorkách:<b class="text-white">{}</b> bežia v nekonečnom
-              procese a opakujú sa.
-              V treťom riadku procedúry vytvárame
-              premennú <b class="text-white">x</b> s hodnotou <b class="text-white">0</b>.
-              V desiatom riadku zadávame
-              podmienku, ktorá hovorí, že program
-              v zátvorkách sa bude opakovať, pokiaľ <b class="text-white">x
-              &lt;=10</b>. Kým podmienka nebude splnená,
-              robot pôjde dopredu, pričom bude
-              overovať či svetelný senzor nenasnímal
-              čiaru.
-              Ak ju nasnímal <b class="text-white">x++</b> pridá premennej
-              hodnotu <b class="text-white">1</b>.
-              Ak <b class="text-white">x</b> nadobudne hodnotu <b class="text-white">10</b>, vykoná sa
-              proces v zátvorkách <b class="text-white">else</b>.
-            </p>
-      </section>
+
+        </section>
+
 
 
 
@@ -1078,6 +1129,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a style="text-decoration:underline"class="nav-link js-scroll-trigger" href="#Attiny85">Attiny guides</a>
+            </li>
+            <li class="nav-item">
+              <a style="text-decoration:underline"class="nav-link js-scroll-trigger" href="#Atmega8">Atmega guides</a>
+            </li>
             <li class="nav-item">
               <a style="text-decoration:underline"class="nav-link js-scroll-trigger" href="index.html">RobotCing</a>
             </li>
