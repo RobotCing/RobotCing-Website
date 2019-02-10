@@ -785,9 +785,9 @@
                 nemusíme nastavovať elektroniku a preto ostane <b class="text-white">void setup(){}</b> prázdny.
                 V siedmom riadku sa overuje hodnota
                 svetelného senzora číslo <b class="text-white">1</b> – ak je jeho
-                analogová hodnota väčšia ako <b class="text-white">50</b>, vypne motor <b class="text-white">B</b>
+                analogová hodnota <b class="text-white">&gt;50</b>, vypne motor <b class="text-white">B</b>
                 a zapne motor <b class="text-white">A</b>. Ak je jeho
-                hodnota menšia alebo rovná <b class="text-white">50</b>,
+                hodnota <b class="text-white">&lt;=50</b>,
                 vykonajú sa príkazy v else. Príkazy v else vypnú motor <b class="text-white">B</b> a
                 zapnú motor <b class="text-white">A</b>.
               </p>
@@ -830,7 +830,7 @@
                 nemusíme nastavovať elektroniku a preto ostane <b class="text-white">void setup(){}</b> prázdny.
                 V siedmom riadku sa overuje
                 podmienka pre svetelný senzor číslo
-                <b class="text-white">1</b>, teda či je jeho hodnota menšia ako <b class="text-white">50</b>.
+                <b class="text-white">1</b>, teda či je jeho hodnota <b class="text-white">&lt;50</b>.
                 Ak je jeho hodnota <b class="text-white">&lt;50</b>, zastaví motor
                 <b class="text-white">A</b>.
                 Ak je hodnota väčšia, motor
@@ -882,9 +882,9 @@
                 nemusíme nastavovať elektroniku a preto ostane <b class="text-white">void setup(){}</b> prázdny.
                 V prvom riadku procedúry sa overuje
                 hodnota tepelného senzora.
-                Ak je jeho hodnota väčšia ako <b class="text-white">30</b>
+                Ak je jeho hodnota <b class="text-white">&gt;30</b>
                 stupňov, zapne motor <b class="text-white">A</b> a motor <b class="text-white">B</b>.
-                Ak je jeho hodnota menšia ako <b class="text-white">30</b>
+                Ak je jeho hodnota <b class="text-white">&lt;30</b>
                 stupňov, vypne motory <b class="text-white">AB</b>.
               </p>
 
