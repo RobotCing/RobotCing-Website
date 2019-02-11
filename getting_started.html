@@ -241,13 +241,16 @@
                 <div class="bg-black text-center h-100 components">
                   <div class="d-flex h-100">
                     <div class="components-text w-100 my-auto text-center text-lg-left">
-                      <h4 class="text-white">Main Board</h4>
+                      <h4 class="text-white">MainBoard</h4>
                       <p class="mb-0 text-white-50">
-                        Robot Cing has 3 levels of programming.
-                        Take your first steps into written code.
-                         Perfect for students who already know
-                          basics of programming, and even those
-                           completely new to coding.
+                        MainBoard je hlavný plošný spoj robota Cing.
+                         Prepája všetky komponenty a obsahuje aj niekoľko
+                          základných senzorov. Obsahuje microUSB port, ktorý slúži na nabíjanie
+                          batérie a pri pokročilejších procesoroch umožnuje vypisovanie hodnôt
+                          do počítača. Taktiež obsahuje porty I2C, Serial, Header1 a Header 2, ktoré
+                          slúžia na pripojenie ďalších senzorov a modulov. Porty ServoA,ServoB a ServoC
+                          slúžia na pripojenie Servo motorov, prípadne regulátorov. MainBoard obsahuje
+                          taktiež 4 individuálne adresovateľné RGB led diódy WS2812.
                       </p>
                     </div>
                   </div>
@@ -587,8 +590,10 @@
                     <div class="components-text w-100 my-auto text-center text-lg-left">
                       <h4 class="text-white">Color sensor</h4>
                       <p class="mb-0 text-white-50">
+                        Robot Cing podporuje Lego EV3 farebný senzor. To mu umožnuje rozlišovať až 7 farieb.
+                        <!--
                         Lego EV3 Color sensor can be connected to robot Cing through special cable.
-                        It allows robot to recognise colors.
+                        It allows robot to recognise up to 7 colors. -->
                       </p>
                     </div>
                   </div>
@@ -606,8 +611,13 @@
                     <div class="components-text w-100 my-auto text-center text-lg-left">
                       <h4 class="text-white">Servo</h4>
                       <p class="mb-0 text-white-50">
+                        K robotovi Cing je možné pripojiť až 3 servo motory bez použitia I2C Servo expandéru.
+                        Odporúčame pripojenie iba 1 serva nakoľko v prípade použití ostatných 2 sa robot Cing nebude vediet hýbať.
+                        Je však možné použiť 1 normálne a 2 nekonečné servá čo robotovi Cing dodá servo a z zvýši silu motorov. 
+                        <!--
                         Up to 3 servos can be connected to robot Cing board without I2C Servo expander.
                         One servo is independent but others disable motors.
+                        -->
                       </p>
                     </div>
                   </div>
@@ -629,6 +639,32 @@
                         128x32 I2C Oled a 128x64 I2C oled.
                         To dovoľuje užívateľovi zobraziť
                         hodnoty bez nutnosti pripojenia k počítaču.
+                        <!-- -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 19 -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+              <div class="col-lg-6">
+                <img class="img-fluid" src="img/GS/Components/gyro.png" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="bg-black text-center h-100 components">
+                  <div class="d-flex h-100">
+                    <div class="components-text w-100 my-auto text-center text-lg-left">
+                      <h4 class="text-white">Gyro and Accelerometer</h4>
+                      <p class="mb-0 text-white-50">
+                        Gyroskop a akcelerometer sú senzory, ktoré umožnujú merať uhlovú rýchlosť a zrýchlenie.
+                        Skombinovaním týchto meraní vieme vupočítať uhol v ktorom sa senzor nachádza. Pomocou polohy
+                        senzora vieme naprogramovať robota Cing, aby sa otočil o konkrétny uhol. Taktiež vieme zaznamenať
+                        pohyb robota Cing.
+                        <!--
+                        Gyro and Accelerometer are sensors used to measure angle speed and acceleration.
+                        Combining that we can calculate angle in which sensor is oriented. This angle can
+                        be used to turn robot to specific angle or detect movement of robot Cing.-->
                       </p>
                     </div>
                   </div>
