@@ -58,7 +58,7 @@ h2 {
   #mainNav .nav-link {
     -webkit-transition: none;
     transition: none;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
     color: rgba(255, 255, 255, 1);
   }
   #mainNav .nav-link:active {
@@ -72,7 +72,7 @@ h2 {
   }
   #mainNav.navbar-shrink .nav-link {
     color: rgb(0,0,0);
-    padding: 1.5rem 1.5rem 1.25rem;
+    padding: 2rem 1rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
