@@ -590,14 +590,13 @@ modals
 */
 
 .about_img{
-  width: 70%;
+  width: 45%;
   border-radius: 50%;
-  border: 10px solid rgb(0,0,0,0);
   position:relative !important;
   margin-bottom: 20px;
 }
 .sponsor_img{
-  width: 90%;
+  width: 50%;
   position:relative !important;
   margin-bottom: 20px;
 }
@@ -605,6 +604,7 @@ modals
   color:rgb(0,0,0);
   text-decoration: underline !important;
 }
+
 .sponsor{
   margin-top: 2rem;
 }
@@ -672,4 +672,41 @@ modals
   float: right;
   font-size: 28px;
   font-weight: bold;
+}
+
+
+
+
+
+#container {
+  width: 650px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+input {
+  border: 1px solid #333;
+  margin-bottom: 15px;
+  min-width: 250px;
+  padding: 8px;
+}
+
+
+
+#cboxLoadedContent {
+  padding: 10px;
+  background: #fffff0;
+}
+
+#modal-content {
+  display: none;
+}
+
+#modal-content label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#modal-content input {
+  width: 95%;
 }
