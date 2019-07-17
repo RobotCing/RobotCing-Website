@@ -58,7 +58,7 @@ h2 {
   #mainNav .nav-link {
     -webkit-transition: none;
     transition: none;
-    padding: 2rem 1rem;
+    padding: 1.5rem 0.75rem;
     color: rgba(255, 255, 255, 1);
   }
   #mainNav .nav-link:active {
@@ -72,7 +72,7 @@ h2 {
   }
   #mainNav.navbar-shrink .nav-link {
     color: rgb(0,0,0);
-    padding: 2rem 1rem 1.25rem;
+    padding: 1.5rem 0.75rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
@@ -467,21 +467,7 @@ Getting started section
   max-width: 20rem;
   font-size: 1rem;
 }
-.forum{
-  margin-top: 10vh;
-  height: 750px; 
-  width: 95%;
-  margin-left: 2.5%;
-  border: none;
-  background: #555;
-  border-radius: 1vw;
-}
-@media (min-width: 1100px) {
-  .forum{
-    width: 43%;
-    margin-left: 28.5%;
-  }
-}
+
 @media (min-width: 768px) {
   .masthead_gs h1 {
     font-size: 4rem;
@@ -563,6 +549,7 @@ About us section
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
+  margin-top: -5rem;
 }
 
 
@@ -673,40 +660,42 @@ modals
   font-size: 28px;
   font-weight: bold;
 }
-
-
-
-
-
-#container {
-  width: 650px;
-  padding: 10px;
-  margin: 0 auto;
+.support{
+  width: 100%;
 }
 
-input {
-  border: 1px solid #333;
-  margin-bottom: 15px;
-  min-width: 250px;
-  padding: 8px;
-}
+/*forum*/
 
-
-
-#cboxLoadedContent {
-  padding: 10px;
-  background: #fffff0;
-}
-
-#modal-content {
-  display: none;
-}
-
-#modal-content label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-#modal-content input {
+.forum{
+  margin-top: 10vh;
+  height: 750px; 
   width: 95%;
+  margin-left: 2.5%;
+  border: none;
+  background: #555;
+  border-radius: 1vw;
+}
+@media (min-width: 1100px) {
+  .forum{
+    width: 43%;
+    margin-left: 28.5%;
+  }
+}
+
+/*calendar*/
+
+.calendar{
+  margin-top: 10vh;
+  height: 750px; 
+  width: 95%;
+  margin-left: 2.5%;
+  border: none;
+  background: #555;
+  border-radius: 1vw;
+}
+@media (min-width: 1100px) {
+  .calendar{
+    width: 43%;
+    margin-left: 28.5%;
+  }
 }
