@@ -699,3 +699,108 @@ modals
     margin-left: 28.5%;
   }
 }
+
+/*configurator*/
+.conf_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35vw;
+  margin-top: 3vw;
+  margin-left: 1.5vw;
+}
+.configurator_box{
+  margin-left: 30vw;
+  position: absolute;
+  background: #fff;
+  border-radius: 1vw;
+  width: 38vw;
+  height: 38vw;
+  top: 0;
+}
+.configurator_box_bg{
+  position: relative;
+  width: 100%;
+  height: 38vw;
+  margin-bottom: 8rem;
+}
+.configurator_checkboxes{
+  margin-left: 5vw;
+  margin-top: -5vh;
+}
+
+
+/* The container */
+.checkbox_container {
+  display: block;
+  position: relative;
+  margin-bottom: 5vh;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 0;
+}
+@media (min-width: 1100px) {
+  .checkbox_container {
+    display: block;
+    position: relative;
+    margin-bottom: 1.75vh;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 0;
+  }
+}
+
+
+/* Hide the browser's default checkbox */
+.checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 23vw;
+  background-color: #fff;
+  border: 5px solid #eee;
+  border-radius: 10px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkmark {
+  border: 5px solid rgb(222, 222, 222);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_container input:checked ~ .checkmark {
+  border: 5px solid #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkbox_text{
+  margin-left: 2%;
+  font-size: 80%;
+}

@@ -102,3 +102,19 @@ function copy_btn(text) {
   document.body.removeChild(dummy);
   alert("Board manager link copied.");
 }
+
+
+function toggleVisibility(id) {
+  var el = document.getElementById(id);
+  if (el.style.visibility=="visible"){
+    el.style.visibility="hidden";
+  }
+  else {
+    el.style.visibility="visible";
+    if(id == "attiny85" || id == "attiny84"){
+      window.alert("We recommend to buy USBASP programmer with Attiny85 and Attiny84. Without programmer you can't program these procesors.");
+    }
+  }
+  
+
+}
