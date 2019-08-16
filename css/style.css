@@ -354,18 +354,22 @@ footer {
 }
 
 #facebook {
-    bottom: 150px;
+    bottom: 210px;
     background-color: #3B5998;
 }
 
 #instagram {
-    bottom: 90px;
-    background-color: #3f729b;
+    bottom: 150px;
+    background-color: rgb(221,42,123);
 }
 
 #github {
-    bottom: 30px;
+    bottom: 90px;
     background-color: #555;
+}
+#mail {
+  bottom: 30px;
+  background-color: rgb(83, 131, 236);
 }
 i{
   font-size: 1.5rem;
